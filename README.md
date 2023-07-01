@@ -134,9 +134,10 @@ To create sequence jobs under each job write **needs: [ jobs that needs to run ]
 To create data action we create file action.ymd, as you can see in directory *.github/workflows* i have two *.ymd* files:
 
 1) *action.yml* - which uses paralel actions to load data
-![ACTION_new.png](..%2F..%2F..%2F..%2FPictures%2FScreenshots%2FACTION_new.png)
+![ACTION_new](https://github.com/sanzhik22/Optimizing-by-paralel-gitactions/assets/102422091/622a3c02-127e-4057-8de4-0e69de9594cd)
+
 2) *sequence.yml* - which uses sequence actions to load data
-![action.png](..%2F..%2F..%2F..%2FPictures%2FScreenshots%2Faction.png)
+![action](https://github.com/sanzhik22/Optimizing-by-paralel-gitactions/assets/102422091/68920161-d52c-4fb1-801f-6981a618d7d2)
 
 As we can see *Action.yml* which is paralel takes 102 seconds and *Sequence.yml* takes 232 seconds
 
