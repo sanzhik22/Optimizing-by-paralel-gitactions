@@ -1,6 +1,6 @@
 import csv
 
-file = open('Archive/Input3/business-operations.csv','r')
+file = open('Archive/Input3/table3.csv','r')
 data = list(csv.reader(file, delimiter=","))
 file.close()
 print(data)
