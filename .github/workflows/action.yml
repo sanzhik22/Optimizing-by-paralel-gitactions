@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install csv
       - name: Run Process1
         run: python3 Py_scr/Process1.py # Exclude the post_requests marker
 
@@ -41,7 +41,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install csv
       - name: Run Process1
         run: python3 Py_scr/Process2.py  # Exclude the post_requests marker
 
@@ -61,6 +61,6 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install csv
       - name: Run Process1
         run: python3 Py_scr/Proces3.py  # Exclude the post_requests marker
