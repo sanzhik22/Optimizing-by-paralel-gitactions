@@ -1,0 +1,63 @@
+{
+  "bytes": 2272701,
+  "count_of_rows": 14758,
+  "hash": "9311f3c322afd9c700e2b72d9e1ca447",
+  "profile": "data-package",
+  "resources": [
+    {
+      "bytes": 2272701,
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "b140385556bcc88d271d443ea291e404",
+      "name": "business-operations",
+      "path": "business-operations.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "industry",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "level",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "size",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "line_code",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "value",
+            "type": "integer"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ]
+}

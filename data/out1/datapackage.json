@@ -1,0 +1,102 @@
+{
+  "bytes": 22544891,
+  "count_of_rows": 101174,
+  "hash": "e8efe48b011a07423a533f6111758837",
+  "profile": "data-package",
+  "resources": [
+    {
+      "bytes": 22544891,
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "a75108d0199c2b5fd178361e02bc260c",
+      "name": "overseas-trade",
+      "path": "overseas-trade.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "Series_reference",
+            "type": "string"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "Period",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "Data_value",
+            "type": "number"
+          },
+          {
+            "format": "default",
+            "name": "STATUS",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "UNITS",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "MAGNTUDE",
+            "type": "integer"
+          },
+          {
+            "format": "default",
+            "name": "Subject",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "Group",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "Series_title_1",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "Series_title_2",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "Series_title_3",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "Series_title_4",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "Series_title_5",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ]
+}
