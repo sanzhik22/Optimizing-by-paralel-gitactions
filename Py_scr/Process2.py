@@ -1,13 +1,10 @@
-import dataflows
+import csv
 
-OverseasFlows = dataflows.Flow(
-    dataflows.load('../Archive/Input2/table2.csv'),
-    dataflows.validate(),
-    dataflows.printer(),
-    dataflows.dump_to_path('../data/out2')
+file = open('../Archive/Input2/table2.csv','r')
+data = list(csv.reader(file, delimiter=","))
+file.close()
+print(data)
 
-
-)
-
-if __name__ == '__main__':
-    OverseasFlows.process()
+with open('../data/out2/output2.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerows(data)
