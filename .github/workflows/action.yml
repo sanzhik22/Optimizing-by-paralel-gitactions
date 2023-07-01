@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.t
       - name: Run Process1
-        run: python -m Py_scr/Process1.py -m "not skip"  # Exclude the post_requests marker
+        run: python3 Py_scr/Process1.py # Exclude the post_requests marker
 
   Process2:
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.t
       - name: Run Process1
-        run: python -m Py_scr/Process2.py -m "not skip"  # Exclude the post_requests marker
+        run: python3 Py_scr/Process2.py  # Exclude the post_requests marker
 
   Process3:
     runs-on: ubuntu-latest
@@ -63,4 +63,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.t
       - name: Run Process1
-        run: python -m Py_scr/Process3.py -m "not skip"  # Exclude the post_requests marker
+        run: python3 Py_scr/Proces3.py  # Exclude the post_requests marker
