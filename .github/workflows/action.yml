@@ -81,7 +81,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Run Process1
+      - name: Run Process4
         run: python3 Py_scr/Process4.py
 
   Process5:
@@ -101,11 +101,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Run Process1
+      - name: Run Process5
         run: python3 Py_scr/Process5.py
 
-      - name: Git commands
+      - name: Commit files
         run: |
-          git add data
-          git commit -m'[data][S] - update data'
-          git add remote https://${{ secrets.token-new }}@github.com/sanzhik22/Optimizing-by-paralel-gitactions.git
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git commit --allow-empty -m "Auto-update of the data packages" -a
+            - name: Push changes
+              uses: ad-m/github-push-action@main
+              with:
+                github_token: ${{ secrets.token-new }
