@@ -75,9 +75,10 @@ jobs:
       - name: Run Process1
         run: python3 Py_scr/Process2.py
 ```
-To create paralel jobs just put JOBS on in jobs section in your *yml*
+To create paralell jobs just put JOB on in job section in your *yml* file
 
 ### Sequence jobs
+
 ```yaml
 name: Processes Sequenced
 
