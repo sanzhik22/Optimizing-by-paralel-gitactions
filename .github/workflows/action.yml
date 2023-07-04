@@ -108,4 +108,4 @@ jobs:
         run: |
           git add data
           git commit -m'[data][S] - update data'
-          git add remote https://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@github.com/sanzhik22/Optimizing-by-paralel-gitactions.git
+          git add remote https://${{ secrets.token-new }}@github.com/sanzhik22/Optimizing-by-paralel-gitactions.git
