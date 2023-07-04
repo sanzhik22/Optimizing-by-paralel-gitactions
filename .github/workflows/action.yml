@@ -45,6 +45,7 @@ jobs:
       - name: Run Process1
         run: python3 Py_scr/Process2.py
 
+
   Process3:
     runs-on: ubuntu-latest
 
@@ -102,3 +103,9 @@ jobs:
           pip install -r requirements.txt
       - name: Run Process1
         run: python3 Py_scr/Process5.py
+
+      - name: Git commands
+        run: |
+          git add data
+          git commit -m'[data][S] - update data'
+          git add remote https://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@github.com/sanzhik22/Optimizing-by-paralel-gitactions.git
