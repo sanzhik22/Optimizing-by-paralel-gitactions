@@ -32,7 +32,7 @@ jobs:
       - name: set global variable
         run: |
           git config --global user.name 'sanzhik22'
-          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+          git config --global user.email 'anapiyaevs0519@gmail.com'
       - name: Check for modified files
         id: git-check
         run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
@@ -71,7 +71,7 @@ jobs:
       - name: set global variable
         run: |
           git config --global user.name 'sanzhik22'
-          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+          git config --global user.email 'anapiyaevs0519@gmail.com'
       - name: Check for modified files
         id: git-check
         run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
@@ -112,7 +112,7 @@ jobs:
       - name: set global variable
         run: |
           git config --global user.name 'sanzhik22'
-          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+          git config --global user.email 'anapiyaevs0519@gmail.com'
       - name: Check for modified files
         id: git-check
         run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
@@ -152,7 +152,7 @@ jobs:
       - name: set global variable
         run: |
           git config --global user.name 'sanzhik22'
-          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+          git config --global user.email 'anapiyaevs0519@gmail.com'
       - name: Check for modified files
         id: git-check
         run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
@@ -193,7 +193,7 @@ jobs:
       - name: set global variable
         run: |
           git config --global user.name 'sanzhik22'
-          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+          git config --global user.email 'anapiyaevs0519@gmail.com'
       - name: Check for modified files
         id: git-check
         run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
