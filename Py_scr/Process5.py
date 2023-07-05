@@ -1,6 +1,6 @@
 import csv
 
-file = open('data/out4/out_table_seq1.csv','r')
+file = open('data/out4/out_table_seq2.csv','r')
 data = list(csv.reader(file, delimiter=","))
 file.close()
 print(data)
