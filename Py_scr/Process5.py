@@ -1,10 +1,10 @@
 import csv
 
-file = open('data/out4/output8.csv','r')
+file = open('data/out4/output10.csv','r')
 data = list(csv.reader(file, delimiter=","))
 file.close()
 print(data)
 
-with open('data/out5/output9.csv', 'w', newline='') as csvfile:
+with open('data/out5/output10.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerows(data)
