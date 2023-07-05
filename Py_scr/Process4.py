@@ -5,6 +5,6 @@ data = list(csv.reader(file, delimiter=","))
 file.close()
 print(data)
 
-with open('data/out4/output4.csv', 'w', newline='') as csvfile:
+with open('data/out4/output6.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerows(data)
