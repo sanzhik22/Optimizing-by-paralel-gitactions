@@ -52,7 +52,7 @@ jobs:
     steps:
       - uses: de-vri-es/setup-git-credentials@v2
         with:
-         credentials: ${{GITHUB_TOKEN}}
+         credentials: ${{secrets.GITHUB_TOKEN}}
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -68,15 +68,23 @@ jobs:
       - name: Run Process1
         run: python3 Py_scr/Process2.py
 
-      - name: Commit files
+      - name: set global variable
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git config --global user.name 'sanzhik22'
+          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+      - name: Check for modified files
+        id: git-check
+        run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
+      - name: Update changes in GitHub repository
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+            git status
+            git add .
+            git commit -m "Auto fetch data and update"
+            git config pull.rebase false
+            git pull origin main
+            git push origin HEAD:main
+
 
 
   Process3:
@@ -85,7 +93,7 @@ jobs:
     steps:
       - uses: de-vri-es/setup-git-credentials@v2
         with:
-         credentials: ${{GITHUB_TOKEN}}
+         credentials: ${{secrets.GITHUB_TOKEN}}
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -101,15 +109,23 @@ jobs:
       - name: Run Process1
         run: python3 Py_scr/Process3.py
 
-      - name: Commit files
+      - name: set global variable
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git config --global user.name 'sanzhik22'
+          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+      - name: Check for modified files
+        id: git-check
+        run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
+      - name: Update changes in GitHub repository
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+            git status
+            git add .
+            git commit -m "Auto fetch data and update"
+            git config pull.rebase false
+            git pull origin main
+            git push origin HEAD:main
+
 
   Process4:
     runs-on: ubuntu-latest
@@ -117,9 +133,10 @@ jobs:
     steps:
       - uses: de-vri-es/setup-git-credentials@v2
         with:
-         credentials: ${{GITHUB_TOKEN}}
+         credentials: ${{secrets.GITHUB_TOKEN}}
       - name: Checkout Repository
         uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -132,15 +149,23 @@ jobs:
       - name: Run Process4
         run: python3 Py_scr/Process4.py
 
-      - name: Commit files
+      - name: set global variable
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git config --global user.name 'sanzhik22'
+          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+      - name: Check for modified files
+        id: git-check
+        run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
+      - name: Update changes in GitHub repository
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+            git status
+            git add .
+            git commit -m "Auto fetch data and update"
+            git config pull.rebase false
+            git pull origin main
+            git push origin HEAD:main
+
 
   Process5:
     runs-on: ubuntu-latest
@@ -149,7 +174,7 @@ jobs:
     steps:
       - uses: de-vri-es/setup-git-credentials@v2
         with:
-         credentials: ${{GITHUB_TOKEN}}
+         credentials: ${{secrets.GITHUB_TOKEN}}
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -165,12 +190,19 @@ jobs:
       - name: Run Process5
         run: python3 Py_scr/Process5.py
 
-      - name: Commit files
+      - name: set global variable
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git config --global user.name 'sanzhik22'
+          git config --global user.email 'anapiyaevs0519@gmail.com@gmail.com'
+      - name: Check for modified files
+        id: git-check
+        run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
+      - name: Update changes in GitHub repository
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+            git status
+            git add .
+            git commit -m "Auto fetch data and update"
+            git config pull.rebase false
+            git pull origin main
+            git push origin HEAD:main
