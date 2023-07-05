@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: de-vri-es/setup-git-credentials@v2
         with:
-         credentials: ${{GITHUB_TOKEN}}
+         credentials: ${{secrets.GITHUB_TOKEN}}
       - name: Checkout Repository
         uses: actions/checkout@v2
 
